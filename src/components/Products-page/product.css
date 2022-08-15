@@ -1,0 +1,39 @@
+.item-main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(205, 199, 199);
+    width: 260px;
+    height: 300px;
+    overflow: hidden;
+    height: 450px;
+    padding: 10px;
+    color: #000;
+    margin: 15px;
+    border-radius: 15px;
+}
+.item img{
+    border-radius: 15px;
+    margin-bottom: 6px;
+}
+.common{
+    margin-bottom: 6px;
+    text-align: center;
+}
+.item button{
+    width: 50%;
+    padding: 6px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 15px;
+    transition: .2s;
+    cursor: pointer;
+}
+.item button:hover{background-color: rgb(161, 157, 157);}

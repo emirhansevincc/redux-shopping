@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import BasketList from "./components/basketList/BasketList";
+import Login from "./components/login/Login";
+import Navbar from "./components/navbar/Navbar";
+import ProductsPage from "./components/Products-page/ProductsPage";
 
 function App() {
+
+  const [product, setProduct] = useState([])
+
+  const { isLoggedIn } = useSelector((state) => state.auth)
+  // console.log(isLoggedIn);
+
+  const { itemsList } = useSelector((state) => state.cart)
+  // console.log(itemsList);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isLoggedIn && <Navbar />}
+      {!isLoggedIn && <Login />}
+      {
+        isLoggedIn && <ProductsPage
+          setProduct={setProduct}
+          product={product}
+        />
+      }
+      {isLoggedIn && itemsList.length > 0 && <BasketList />}
     </div>
   );
 }
