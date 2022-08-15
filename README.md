@@ -1,3 +1,7 @@
+![shop-1](https://user-images.githubusercontent.com/85807749/184722883-0c87ffdd-965b-486b-8eb5-c0c37e3ab7d1.png)
+
+![shop-2](https://user-images.githubusercontent.com/85807749/184722917-5788bc1f-fc30-4179-b6b4-02dc594014d1.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
